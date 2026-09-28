@@ -1,0 +1,21 @@
+title: 이승현의 기록
+description: 게임 개발, 그래픽스, 프로그래밍을 기록합니다.
+url: https://seung-hyun-211.github.io
+baseurl: ""
+lang: ko-KR
+timezone: Asia/Seoul
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+show_excerpts: true
+excerpt_separator: "\n\n"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - .git
+  - README.md

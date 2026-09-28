@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="article">
+  <a class="back-link" href="{{ '/' | relative_url }}">← 전체 글</a>
+  <header class="article-header">
+    <div class="post-meta"><span class="category-label">{{ page.categories | join: ' · ' | default: '기록' | escape }}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time></div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.tags and page.tags.size > 0 %}<div class="tag-list">{% for tag in page.tags %}<span>#{{ tag | escape }}</span>{% endfor %}</div>{% endif %}
+  </header>
+  <div class="article-body">{{ content }}</div>
+  {% if page.original_url %}<aside class="source-note">원문: <a href="{{ page.original_url }}" rel="noopener noreferrer">티스토리에서 보기 ↗</a></aside>{% endif %}
+  <nav class="article-pagination" aria-label="다른 글">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>← 이전 글</span><strong>{{ page.previous.title | escape }}</strong></a>{% endif %}
+    {% if page.next %}<a class="next-post" href="{{ page.next.url | relative_url }}"><span>다음 글 →</span><strong>{{ page.next.title | escape }}</strong></a>{% endif %}
+  </nav>
+</article>

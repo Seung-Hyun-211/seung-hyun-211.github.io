@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="theme-color" content="#0b1017">
+  <title>{% if page.title and page.title != '홈' %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <a class="identity" href="{{ '/' | relative_url }}" aria-label="이승현의 기록 홈">
+        <img class="avatar" src="https://github.com/Seung-Hyun-211.png?size=160" alt="이승현 프로필 사진" width="80" height="80">
+        <span class="identity-name">이승현</span>
+        <span class="identity-role">게임 개발 · 그래픽스 · 기록</span>
+      </a>
+
+      <nav class="side-nav" aria-label="블로그 메뉴">
+        <p class="nav-heading">NAVIGATION</p>
+        <a class="nav-link" href="{{ '/' | relative_url }}">전체 글</a>
+        <a class="nav-link" href="{{ '/archive.html' | relative_url }}">아카이브</a>
+        <p class="nav-heading category-heading">CATEGORIES</p>
+        {% assign sorted_categories = site.categories | sort %}
+        {% for category in sorted_categories %}
+        <a class="nav-link category-link" href="{{ '/' | relative_url }}?category={{ category[0] | uri_escape }}"><span>{{ category[0] | escape }}</span><span class="nav-count">{{ category[1].size }}</span></a>
+        {% endfor %}
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="https://github.com/Seung-Hyun-211">GitHub <span>@Seung-Hyun-211</span></a>
+        <a href="https://beie-myong.tistory.com/">Tistory 원문 <span>beie-myong</span></a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="topbar"><span>SEUNG-HYUN-211.GITHUB.IO</span><span>기록은 계속됩니다 <span aria-hidden="true">↘</span></span></div>
+      {{ content }}
+      <footer class="site-footer">© {{ site.time | date: '%Y' }} 이승현 · Built with GitHub Pages</footer>
+    </main>
+  </div>
+</body>
+</html>
