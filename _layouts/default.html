@@ -18,14 +18,18 @@
       </a>
 
       <nav class="side-nav" aria-label="블로그 메뉴">
-        <p class="nav-heading">NAVIGATION</p>
+        <p class="nav-heading">BLOG</p>
         <a class="nav-link" href="{{ '/' | relative_url }}">전체 글</a>
-        <a class="nav-link" href="{{ '/archive.html' | relative_url }}">아카이브</a>
         <p class="nav-heading category-heading">CATEGORIES</p>
         {% assign sorted_categories = site.categories | sort %}
         {% for category in sorted_categories %}
         <a class="nav-link category-link" href="{{ '/' | relative_url }}?category={{ category[0] | uri_escape }}"><span>{{ category[0] | escape }}</span><span class="nav-count">{{ category[1].size }}</span></a>
         {% endfor %}
+        <p class="nav-heading project-heading">PROJECTS</p>
+        <a class="project-link" href="https://github.com/Seung-Hyun-211/usn" target="_blank" rel="noopener noreferrer"><span class="project-name">usn <span aria-hidden="true">↗</span></span><small>Unity · 멀티플레이 슈팅</small></a>
+        <a class="project-link" href="https://github.com/Seung-Hyun-211/AI_Lo_Engine_Man_Dul_Gi" target="_blank" rel="noopener noreferrer"><span class="project-name">자체 게임 엔진 <span aria-hidden="true">↗</span></span><small>C++20 · DirectX 11</small></a>
+        <a class="project-link" href="https://github.com/Seung-Hyun-211/ClaudeUnityPluginTest" target="_blank" rel="noopener noreferrer"><span class="project-name">Unity 액션 게임 <span aria-hidden="true">↗</span></span><small>ClaudeUnityPluginTest</small></a>
+        <a class="project-link" href="https://github.com/Seung-Hyun-211/DppBot" target="_blank" rel="noopener noreferrer"><span class="project-name">DppBot <span aria-hidden="true">↗</span></span><small>C++ · Go 음악봇</small></a>
       </nav>
 
       <div class="sidebar-footer">
@@ -35,7 +39,7 @@
     </aside>
 
     <main class="main-content">
-      <div class="topbar"><span>SEUNG-HYUN-211.GITHUB.IO</span><span>기록은 계속됩니다 <span aria-hidden="true">↘</span></span></div>
+      <div class="topbar"><span>SEUNG-HYUN-211.GITHUB.IO</span></div>
       {{ content }}
       <footer class="site-footer">© {{ site.time | date: '%Y' }} 이승현 · Built with GitHub Pages</footer>
     </main>
