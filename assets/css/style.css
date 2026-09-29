@@ -89,6 +89,7 @@ button, input, select { font: inherit; }
 .article-body h2 { margin: 34px 0 10px; color: #c9efff; font-size: 1.38rem; }
 .article-body h3 { margin: 27px 0 8px; color: #dcecf5; font-size: 1.12rem; }
 .article-body p, .article-body li { color: #c3ced9; }
+.article-body img { max-width: 100%; height: auto; }
 .article-body li { margin: 6px 0; }
 .article-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .article-body blockquote { margin: 20px 0; padding: 3px 0 3px 18px; border-left: 3px solid #45647a; color: var(--muted); }
