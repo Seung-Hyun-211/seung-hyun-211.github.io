@@ -10,4 +10,9 @@ original_url: https://beie-myong.tistory.com/41
 
 사격, 폭발, 지연폭발, 화염, 장판.
 
-[원문 영상: 각종 기능 추가](https://www.youtube.com/watch?v=_-je3puI8s4)
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/_-je3puI8s4" title="각종 기능 추가 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>각종 기능 추가</figcaption>
+</figure>

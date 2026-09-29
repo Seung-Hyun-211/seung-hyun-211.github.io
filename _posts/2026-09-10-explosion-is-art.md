@@ -14,4 +14,9 @@ VAT + SoA를 이용한 글.
 
 ## ☆폭★발!♬
 
-[원문 영상: Release + 16384](https://www.youtube.com/watch?v=ud9BcHpeTBE)
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/ud9BcHpeTBE" title="Release + 16384 폭발 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>Release + 16384</figcaption>
+</figure>

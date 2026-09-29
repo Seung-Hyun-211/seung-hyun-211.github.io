@@ -14,5 +14,16 @@ VAT + SoA 세트로 좀비를 5000개 생성해 보았다.
 
 ## 테스트 영상
 
-- [테스트 1000](https://www.youtube.com/watch?v=rsxcl8h5og4)
-- [테스트 5000](https://www.youtube.com/watch?v=E8G76dHNbo8)
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/rsxcl8h5og4" title="좀비 1000개 테스트 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>테스트 1000</figcaption>
+</figure>
+
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/E8G76dHNbo8" title="좀비 5000개 테스트 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>테스트 5000</figcaption>
+</figure>
