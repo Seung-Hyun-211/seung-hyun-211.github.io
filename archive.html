@@ -16,10 +16,13 @@ description: 이승현의 기술 블로그 전체 글 목록.
     <label class="search-box"><span class="sr-only">글 검색</span><span aria-hidden="true">⌕</span><input id="post-search" type="search" placeholder="제목과 본문 검색"></label>
     <label class="sr-only" for="category-filter">분류 선택</label>
     <select id="category-filter"><option value="">모든 분류</option>{% assign sorted_categories = site.categories | sort %}{% for category in sorted_categories %}<option value="{{ category[0] | escape }}">{{ category[0] | escape }} ({{ category[1].size }})</option>{% endfor %}</select>
+    <label class="sr-only" for="sort-order">날짜 정렬</label>
+    <select id="sort-order"><option value="newest">최신순</option><option value="oldest">오래된순</option></select>
   </div>
   <div class="post-list" id="post-list">
-    {% for post in site.posts %}
-    <article class="post-card" data-categories="|{{ post.categories | join: '|' | escape }}|" data-search="{{ post.title | append: ' ' | append: post.content | strip_html | normalize_whitespace | escape }}">
+    {% assign posts_by_date = site.posts | sort: 'date' | reverse %}
+    {% for post in posts_by_date %}
+    <article class="post-card" data-timestamp="{{ post.date | date: '%s' }}" data-categories="|{{ post.categories | join: '|' | escape }}|" data-search="{{ post.title | append: ' ' | append: post.content | strip_html | normalize_whitespace | escape }}">
       <a class="post-card-link" href="{{ post.url | relative_url }}">
         <div class="post-meta"><span class="category-label">{{ post.categories | join: ' · ' | default: '기록' | escape }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time></div>
         <h3>{{ post.title | escape }}</h3>

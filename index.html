@@ -4,36 +4,34 @@ title: 홈
 description: 게임 개발과 그래픽스, 프로그래밍을 기록하는 이승현의 기술 블로그.
 ---
 
-<section class="hero">
-  <p class="eyebrow">DEVLOG / NOTES</p>
-  <h1>생각을 기록하고<br>다음 빌드로 갑니다.</h1>
-  <p class="hero-copy">게임 개발과 엔진, 렌더링, CS를 공부하며 남긴 기록입니다. 글은 Markdown으로 작성하고, 목록과 본문은 GitHub Pages가 자동으로 만들어줍니다.</p>
-  <a class="hero-link" href="{{ '/archive.html' | relative_url }}">전체 글 보기 <span aria-hidden="true">↗</span></a>
+<section class="home-intro">
+  <p class="eyebrow">SEUNG-HYUN'S NOTES</p>
+  <h1>기록</h1>
+  <p>게임 개발과 그래픽스를 공부하며 남긴 글입니다.</p>
 </section>
 
-<section class="section" aria-labelledby="posts-title">
-  <div class="section-heading">
-    <div>
-      <p class="eyebrow">THE NOTEBOOK</p>
-      <h2 id="posts-title">최근 기록</h2>
-    </div>
-    <span class="post-count">{{ site.posts.size }} POSTS</span>
+<section class="section home-section" aria-labelledby="posts-title">
+  <div class="section-heading home-section-heading">
+    <h2 id="posts-title">글 목록</h2>
+    <span class="post-count">{{ site.posts.size }}개의 글</span>
   </div>
 
   <div class="toolbar">
     <label class="search-box"><span class="sr-only">글 검색</span><span aria-hidden="true">⌕</span><input id="post-search" type="search" placeholder="제목과 본문 검색"></label>
     <label class="sr-only" for="category-filter">분류 선택</label>
     <select id="category-filter"><option value="">모든 분류</option>{% assign sorted_categories = site.categories | sort %}{% for category in sorted_categories %}<option value="{{ category[0] | escape }}">{{ category[0] | escape }} ({{ category[1].size }})</option>{% endfor %}</select>
+    <label class="sr-only" for="sort-order">날짜 정렬</label>
+    <select id="sort-order"><option value="newest">최신순</option><option value="oldest">오래된순</option></select>
   </div>
 
-  <div class="post-list" id="post-list">
-    {% for post in site.posts %}
-    <article class="post-card" data-categories="|{{ post.categories | join: '|' | escape }}|" data-search="{{ post.title | append: ' ' | append: post.content | strip_html | normalize_whitespace | escape }}">
+  <div class="post-list home-list" id="post-list">
+    {% assign posts_by_date = site.posts | sort: 'date' | reverse %}
+    {% for post in posts_by_date %}
+    <article class="post-card home-post" data-timestamp="{{ post.date | date: '%s' }}" data-categories="|{{ post.categories | join: '|' | escape }}|" data-search="{{ post.title | append: ' ' | append: post.content | strip_html | normalize_whitespace | escape }}">
       <a class="post-card-link" href="{{ post.url | relative_url }}">
-        <div class="post-meta"><span class="category-label">{{ post.categories | join: ' · ' | default: '기록' | escape }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time></div>
+        <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time><span class="category-label">{{ post.categories | join: ' · ' | default: '기록' | escape }}</span></div>
         <h3>{{ post.title | escape }}</h3>
-        <p class="post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 180 | escape }}</p>
-        <span class="read-more">읽기 <span aria-hidden="true">→</span></span>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 110 | escape }}</p>
       </a>
     </article>
     {% endfor %}
