@@ -7,6 +7,13 @@ tags: [아카이브, 영상]
 original_url: https://beie-myong.tistory.com/19
 ---
 
-이전 블로그의 2024년 4월 자료입니다. 원문에서 “소리주의” 안내와 외부 영상 삽입을 확인했습니다. 영상 본문이나 자막은 읽을 수 없어 내용을 추측해 옮기지 않고 원문 링크를 보존합니다.
+이전 블로그의 2024년 4월 자료입니다. 소리주의.
+
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/dfIA9vCdGLA" title="2024년 4월 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>24.04</figcaption>
+</figure>
 
 [티스토리 원문 열기](https://beie-myong.tistory.com/19)

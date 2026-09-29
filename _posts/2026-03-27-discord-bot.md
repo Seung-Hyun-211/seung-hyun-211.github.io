@@ -15,3 +15,10 @@ original_url: https://beie-myong.tistory.com/21
 - 봇 클라이언트: C++
 - 서버: Go
 - 데이터베이스: MySQL
+
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/WFGFKqfOUrQ" title="디코봇 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>디코봇</figcaption>
+</figure>

@@ -7,6 +7,13 @@ tags: [아카이브]
 original_url: https://beie-myong.tistory.com/18
 ---
 
-이전 블로그의 2024년 3월 자료를 연결한 아카이브 게시물입니다. 티스토리 원문에는 외부 삽입 콘텐츠만 확인되며, 본문 텍스트나 영상 자막은 공개 페이지에서 추출되지 않아 임의로 내용을 덧붙이지 않았습니다.
+이전 블로그의 2024년 3월 자료입니다.
+
+<figure class="video-embed">
+  <div class="video-frame">
+    <iframe src="https://www.youtube.com/embed/5ikOh9sdmtc" title="2024년 3월 영상" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <figcaption>24.03</figcaption>
+</figure>
 
 [티스토리 원문 열기](https://beie-myong.tistory.com/18)
