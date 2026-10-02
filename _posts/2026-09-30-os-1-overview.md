@@ -15,7 +15,7 @@ tags: [운영체제]
 * [5. 가상 메모리](/2026/09/30/os-5-virtual-memory/)
   
 # 운영체제 개요
-운영체제 = `커널 kernel`
+운영체제 ⊃ `커널 kernel`
 ## 자원할당 및 관리
 
 컴퓨터 프로그램 실행에 필요한 SW자원 Data, HW자원 CPU, MEM, SSD등을 관리
